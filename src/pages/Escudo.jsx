@@ -1,5 +1,4 @@
-import { Button, Col, Container, Row } from 'react-bootstrap'
-import { Link, Element } from 'react-scroll';
+import { Container } from 'react-bootstrap'
 import { motion, useScroll } from "framer-motion"
 
 export const Escudo = () => {

@@ -42,8 +42,10 @@ export const CompNavbar = () => {
                             <NavLink eventKey="9" as={Link} to='equipos/cordinacion' className="nav-link navDropdown">Cordinacion</NavLink>
                         </NavDropdown> */}
 
-                        <NavLink eventKey="10" as={Link} to="/sanpantaleon" className="nav-link active">Blog</NavLink>
-                        <NavLink eventKey="11" as={Link} to='/manosalaobra' className="nav-link active">Escudo</NavLink>
+                        <NavLink eventKey="10" as={Link} to="/blog" className="nav-link active">Blog</NavLink>
+                        <NavLink eventKey="10" as={Link} to="/devocionario" className="nav-link active">Devocionario</NavLink>
+                        <NavLink eventKey="10" as={Link} to="/formacion" className="nav-link active">Formación</NavLink>
+                        <NavLink eventKey="11" as={Link} to='/escudo' className="nav-link active">Escudo</NavLink>
 
 
                     </Nav>

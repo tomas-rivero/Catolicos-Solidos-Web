@@ -15,15 +15,10 @@ export const LayoutPublic = () => {
 
     const validRoutes =
         ["/",
-            "/sanpantaleon",
+            "/blog",
             "/escudo",
-            "/manosalaobra",
-            "/pur/equipos",
-            "/areas/sociales",
-            "/areas/salud",
-            "/areas/ecopuring",
-            "/areas/arteydisenio",
-            "equipos/comunicacion"
+            "/devocionario",
+            "/formacion"
         ];
 
     const isNavbarVisible = validRoutes.includes(location.pathname);

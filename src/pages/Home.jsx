@@ -1,7 +1,6 @@
 import { Carousel, Col, Container, Ratio, Row } from 'react-bootstrap';
 import { Element, Link } from 'react-scroll';
 import { motion, useScroll } from "framer-motion"
-import Button from 'react-bootstrap/Button';
 import { NavLink } from 'react-router-dom';
 
 export const Home = () => {
@@ -47,7 +46,10 @@ export const Home = () => {
                                     <motion.div
                                         initial={{ opacity: 0 }}
                                         animate={{ opacity: 1 }}
-                                        transition={{ duration: 2 }}
+                                        transition={{
+                                            duration: 1,
+                                            delay: 0.5,
+                                        }}
                                     >
                                         <p>Católicos Sólidos</p>
                                     </motion.div>
@@ -57,29 +59,39 @@ export const Home = () => {
                                         animate={{ opacity: 1 }}
                                         transition={{
                                             duration: 2,
-                                            delay: 1,
+                                            delay: 0.7,
                                         }}
                                     >
                                         <img className='logoHome' src="../img/logo.png" alt="" />
                                     </motion.div>
 
-                                    <Link to="inicio">
-                                        <button class="animated-button">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="arr-2" viewBox="0 0 24 24">
-                                                <path
-                                                    d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
-                                                ></path>
-                                            </svg>
-                                            <span class="text">Saber más</span>
-                                            <span class="circle"></span>
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="arr-1" viewBox="0 0 24 24">
-                                                <path
-                                                    d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
-                                                ></path>
-                                            </svg>
-                                        </button>
+                                    <motion.div
+                                        initial={{ opacity: 0 }}
+                                        animate={{ opacity: 1 }}
+                                        transition={{
+                                            duration: 2,
+                                            delay: 0.9,
+                                        }}
+                                    >
 
-                                    </Link>
+                                        <Link to="inicio">
+                                            <button className="animated-button">
+                                                <svg xmlns="http://www.w3.org/2000/svg" className="arr-2" viewBox="0 0 24 24">
+                                                    <path
+                                                        d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+                                                    ></path>
+                                                </svg>
+                                                <span className="text">Saber más</span>
+                                                <span className="circle"></span>
+                                                <svg xmlns="http://www.w3.org/2000/svg" className="arr-1" viewBox="0 0 24 24">
+                                                    <path
+                                                        d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+                                                    ></path>
+                                                </svg>
+                                            </button>
+
+                                        </Link>
+                                    </motion.div>
 
                                 </div>
 
@@ -87,9 +99,7 @@ export const Home = () => {
                         </section>
                     </Element>
 
-                    <Container>
-
-
+                    <Container fluid="xl">
                         <Element name="inicio">
                             <motion.div variants={boxVariant}
                                 initial="opacityClear"
@@ -194,11 +204,10 @@ export const Home = () => {
 
                     </div>
 
-                    <div className='text-center p-5'>
-                        <img width="30" height="30" src="./img/whiteCross.png" alt="white-cross" />
-                    </div>
-
                     <Container fluid="xl">
+                        <div className='text-center p-5'>
+                            <img width="30" height="30" src="./img/whiteCross.png" alt="white-cross" />
+                        </div>
                         <section className='text-white'>
                             <h1 className='text-center mb-4'>Nuestros patronos</h1>
                             <Row xs={1} md={2} lg={3}>
@@ -372,7 +381,7 @@ export const Home = () => {
 
                         <section>
                             <script src="https://static.elfsight.com/platform/platform.js" async></script>
-                            <div class="elfsight-app-7ebe1041-1be3-44d9-a665-a1e355b6774f" data-elfsight-app-lazy></div>
+                            <div className="elfsight-app-7ebe1041-1be3-44d9-a665-a1e355b6774f" data-elfsight-app-lazy></div>
                         </section>
 
                     </Container>

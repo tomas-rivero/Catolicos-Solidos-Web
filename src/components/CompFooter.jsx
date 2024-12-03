@@ -44,7 +44,7 @@ export const CompFooter = () => {
                                     </a>
                                 </Col>
                             </Row>
-                            <img src='../img/logocslineas.png' className='imgPurFooter m-2' />
+                            <img src='../img/logocslineas.png' className='imgFooter my-3' />
 
                             <figcaption className="textFooter text-white-50">Sitio oficial de Católicos Sólidos</figcaption>
 

@@ -96,6 +96,17 @@
   position: relative;
 }
 
+.containerDivImageBlog {
+  background-image: url('../img/fondo_blog.jpg');
+  width: 100%;
+  height: 70vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  position: relative;
+}
+
 .imgDiv {
   background-size: cover;
   background-repeat: no-repeat;
@@ -549,8 +560,8 @@ circle {
   background-color: #ff0000 !important;
   transition: 0.5s;
 }
-.imgPurFooter {
-  width: 10rem;
+.imgFooter {
+  width: 5rem;
 }
 
 .textFooter {
@@ -696,4 +707,47 @@ circle {
   90% {
     stroke: #ffa700;
   }
+}
+/* Card Styles */
+
+.cardBlog {
+  border-radius: 8px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin: 0.5rem 0;
+}
+
+.cardBlogImage img {
+  max-height: 100%;
+  max-width: 100%;
+  border-radius: 8px 8px 0px 0;
+}
+
+.cardBlogHeading {
+  font-size: 18px;
+  font-weight: bold;
+  background: #fff;
+  padding: 10px 15px;
+}
+
+.cardBlogText {
+  padding: 10px 15px;
+  background: #fff;
+  font-size: 14px;
+  color: #636262;
+}
+
+.cardBlogButton {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  width: 100%;
+  background-color: #1f487e;
+  color: #fff;
+  border-radius: 0 0 8px 8px;
+}
+
+.cardBlogButton:hover {
+  text-decoration: none;
+  background-color: #1d3461;
+  color: #fff;
 }
