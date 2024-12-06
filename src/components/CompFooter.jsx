@@ -26,19 +26,24 @@ export const CompFooter = () => {
                 <Container>
                     <Row className="justify-content-md-center align-items-center text-center">
                         <Col xs={12} sm={12} md={3} className='fw-semibold'>
-                            <Row>
-                                <Col xs={4}>
+                            <Row xs={4}>
+                                <Col>
                                     <a href="https://www.instagram.com/catolicos.solidos/">
                                         <Image src="../img/social/instagram.png" alt="" width={40} className='btn btn-instagram p-2' roundedCircle />
                                     </a>
 
                                 </Col>
-                                <Col xs={4}>
-                                    <a href="https://www.facebook.com/purosario">
-                                        <Image src="../img/social/facebook.png" alt="" width={40} className='btn btn-facebook p-2' roundedCircle />
+                                <Col>
+                                    <a href="https://chat.whatsapp.com/GIhKttDmGi68Y6i7rJ6S5s">
+                                        <Image src="../img/social/whatsapp.png" alt="" width={40} className='btn btn-whatsapp p-2' roundedCircle />
                                     </a>
                                 </Col>
-                                <Col xs={4}>
+                                <Col>
+                                    <a href="https://twitter.com/catolico_solido">
+                                        <Image src="../img/social/twitter.png" alt="" width={40} className='btn btn-twitter p-2' roundedCircle />
+                                    </a>
+                                </Col>
+                                <Col>
                                     <a href="https://www.youtube.com/@catolicos.solidos">
                                         <Image src="../img/social/youtube.png" alt="" width={40} className='btn btn-youtube p-2' roundedCircle />
                                     </a>

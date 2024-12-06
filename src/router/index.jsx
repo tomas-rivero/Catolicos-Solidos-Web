@@ -1,7 +1,7 @@
 
 import { createBrowserRouter } from "react-router-dom";
 import { LayoutPublic } from "../layout/LayoutPublic";
-import { Blog, NotFound, Home, Escudo } from "../pages"
+import { Blog, AllBlog, AddBlog, DetailBlog, NotFound, Home, Escudo } from "../pages"
 
 export const router = createBrowserRouter([
     {
@@ -20,6 +20,18 @@ export const router = createBrowserRouter([
             {
                 path: '/blog',
                 element: <Blog />,
+            },
+            {
+                path: '/blog/todos',
+                element: <AllBlog />,
+            },
+            {
+                path: '/blog/:id',
+                element: <DetailBlog />,
+            },
+            {
+                path: '/agregarblog',
+                element: <AddBlog />,
             },
         ]
     },

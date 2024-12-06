@@ -1,27 +1,38 @@
 import { CompFooter, CompNavbar } from "../components";
 import { LazyMotion, domAnimation, m } from "framer-motion"
-import { useLocation, Outlet } from "react-router-dom"
+import { useLocation, Outlet, useParams } from "react-router-dom"
 import { useState } from "react";
 import UseScrollTop from "../components/ScrollToTop";
+import { useEffect } from "react";
 
 
 export const LayoutPublic = () => {
     const [loader, setLoader] = useState(true)
-    window.addEventListener('load', () => {
-        setLoader(false)
-    })
+
+    useEffect(() => {
+        window.addEventListener('load', () => {
+            setLoader(false)
+            console.log(loader);
+        })
+    }, [])
+
 
     const location = useLocation();
+    const id = useParams().id
 
     const validRoutes =
         ["/",
             "/blog",
+            "/blog/todos",
+            "/blog/" + id,
+            "/agregarblog",
             "/escudo",
             "/devocionario",
             "/formacion"
         ];
 
     const isNavbarVisible = validRoutes.includes(location.pathname);
+
 
     UseScrollTop()
 

@@ -543,13 +543,19 @@ circle {
   background-color: #5f4bc6 !important;
   transition: 0.5s;
 }
-
-.btn-facebook {
-  border-color: #1877f2 !important;
+.btn-twitter {
+  border-color: #000 !important;
+}
+.btn-twitter:hover {
+  background-color: #000 !important;
+  transition: 0.5s;
 }
 
-.btn-facebook:hover {
-  background-color: #1877f2 !important;
+.btn-whatsapp {
+  border-color: #25d366 !important;
+}
+.btn-whatsapp:hover {
+  background-color: #25d366 !important;
   transition: 0.5s;
 }
 
@@ -708,6 +714,11 @@ circle {
     stroke: #ffa700;
   }
 }
+
+.rowBlogs:nth-of-type(n + 5) {
+  display: none;
+}
+
 /* Card Styles */
 
 .cardBlog {

@@ -2,8 +2,28 @@ import { Button, Container, Row, Col, Card, Figure } from 'react-bootstrap';
 import { Element, Link as LinkScroll } from 'react-scroll';
 import { motion, useScroll } from "framer-motion"
 import { Link } from 'react-router-dom';
+import { collection, getDocs } from 'firebase/firestore';
+import { db } from '../firebase/config';
+import { useEffect, useState } from 'react';
 
 export const Blog = () => {
+
+  const [blog, setBlog] = useState([])
+
+  useEffect(() => {
+
+    const blogRef = collection(db, "blogs");
+
+    getDocs(blogRef)
+      .then((resp) => {
+        setBlog(
+          resp.docs.map((doc) => {
+            return { ...doc.data(), id: doc.id }
+          })
+        );
+      })
+  }, [])
+
 
   const { scrollYProgress } = useScroll();
 
@@ -125,78 +145,29 @@ export const Blog = () => {
 
               <Container className='pb-5'>
                 <Row xs={1} md={2} lg={3} xl={4}>
-                  <Col>
-                    <div className="cardBlog">
-                      <div className="cardBlogImage">
-                        <img src="../img/blog02.jpg" />
-                      </div>
-                      <div className="cardBlogHeading">
-                        Titulo 01
-                      </div>
-                      <div className="cardBlogText">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, enim.
-                      </div>
-                      <div className="cardBlogText">
-                        09/12/2024
-                      </div>
-                      <a href="#" className="cardBlogButton">Leer</a>
-                    </div>
 
-                  </Col>
-                  <Col>
-                    <div className="cardBlog">
-                      <div className="cardBlogImage">
-                        <img src="../img/blog02.jpg" />
+                  {blog.map((data) => (
+                    <Col key={data.id} className='rowBlogs'>
+                      <div className="cardBlog">
+                        <div className="cardBlogImage">
+                          <img src="../img/blog02.jpg" />
+                        </div>
+                        <div className="cardBlogHeading">
+                          {data.titulo}
+                        </div>
+                        <div className="cardBlogText">
+                          {data.descripcion}
+                        </div>
+                        <div className="cardBlogText">
+                          {data.fecha}
+                        </div>
+                        <Link to={'/blog/' + data.id} className="cardBlogButton" >
+                          Leer
+                        </Link>
                       </div>
-                      <div className="cardBlogHeading">
-                        Titulo 01
-                      </div>
-                      <div className="cardBlogText">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, enim.
-                      </div>
-                      <div className="cardBlogText">
-                        09/12/2024
-                      </div>
-                      <a href="#" className="cardBlogButton">Leer</a>
-                    </div>
-
-                  </Col>
-                  <Col>
-                    <div className="cardBlog">
-                      <div className="cardBlogImage">
-                        <img src="../img/blog02.jpg" />
-                      </div>
-                      <div className="cardBlogHeading">
-                        Titulo 01
-                      </div>
-                      <div className="cardBlogText">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, enim.
-                      </div>
-                      <div className="cardBlogText">
-                        09/12/2024
-                      </div>
-                      <a href="#" className="cardBlogButton">Leer</a>
-                    </div>
-
-                  </Col>
-                  <Col>
-                    <div className="cardBlog">
-                      <div className="cardBlogImage">
-                        <img src="../img/blog02.jpg" />
-                      </div>
-                      <div className="cardBlogHeading">
-                        Titulo 01
-                      </div>
-                      <div className="cardBlogText">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, enim.
-                      </div>
-                      <div className="cardBlogText">
-                        09/12/2024
-                      </div>
-                      <a href="#" className="cardBlogButton">Leer</a>
-                    </div>
-
-                  </Col>
+                    </Col>
+                  ))
+                  }
                 </Row>
 
                 <div className="d-flex justify-content-center pt-4">
