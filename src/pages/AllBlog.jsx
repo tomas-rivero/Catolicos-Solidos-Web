@@ -104,18 +104,19 @@ export const AllBlog = () => {
                                                 <div className="cardBlogHeading">
                                                     {data.titulo}
                                                 </div>
-                                                <div className="cardBlogText">
+                                                <div className="cardBlogText pb-1">
                                                     {data.descripcion}
                                                 </div>
-                                                <div className="cardBlogText">
-                                                    {data.fecha}
+                                                <div className="containerHr pb-3">
+                                                    <hr className='hrBlog' />
+                                                </div>
+                                                <div className="cardBlogText fw-semibold">
+                                                    Fecha: {data.fecha}
                                                 </div>
                                                 <Link to={'/blog/' + data.id} className="cardBlogButton" >
                                                     Leer
                                                 </Link>
-
                                             </div>
-
                                         </Col>
                                     ))
                                     }

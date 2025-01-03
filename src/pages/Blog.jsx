@@ -155,8 +155,11 @@ export const Blog = () => {
                         <div className="cardBlogHeading">
                           {data.titulo}
                         </div>
-                        <div className="cardBlogText">
+                        <div className="cardBlogText pb-1">
                           {data.descripcion}
+                        </div>
+                        <div className="containerHr pb-3">
+                          <hr className='hrBlog' />
                         </div>
                         <div className="cardBlogText">
                           {data.fecha}

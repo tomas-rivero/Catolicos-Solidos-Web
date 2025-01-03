@@ -10,7 +10,6 @@ import { useEffect, useState } from 'react';
 
 
 export const DetailBlog = () => {
-
     const [blog, setBlog] = useState([])
     const id = useParams().id;
 
@@ -157,13 +156,18 @@ export const DetailBlog = () => {
                                             <div className="cardBlogHeading">
                                                 {blog.titulo}
                                             </div>
-                                            <div className="cardBlogText">
+                                            <div className="cardBlogText pb-1">
                                                 {blog.descripcion}
+                                            </div>
+                                            <div className="containerHr pb-3">
+                                                <hr className='hrBlog' />
                                             </div>
                                             <div className="cardBlogText">
                                                 {blog.fecha}
                                             </div>
-                                            <a href="#" className="cardBlogButton">Leer</a>
+                                            <Link to={'/blog/' + blog.id} className="cardBlogButton" >
+                                                Leer
+                                            </Link>
                                         </div>
                                     </Col>
 

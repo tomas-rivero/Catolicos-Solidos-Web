@@ -737,7 +737,10 @@ circle {
   font-size: 18px;
   font-weight: bold;
   background: #fff;
-  padding: 10px 15px;
+  padding: 0.7rem 1rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .cardBlogText {
@@ -745,6 +748,10 @@ circle {
   background: #fff;
   font-size: 14px;
   color: #636262;
+  white-space: wrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-height: 6rem;
 }
 
 .cardBlogButton {
@@ -761,4 +768,22 @@ circle {
   text-decoration: none;
   background-color: #1d3461;
   color: #fff;
+}
+.containerHr {
+  position: relative;
+  background: #fff;
+}
+
+.hrBlog {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 90%;
+  border: 1px solid #000;
+  top: 0;
+  opacity: 0.3;
+}
+
+.invalid-feedback {
+  width: 25% !important;
 }
